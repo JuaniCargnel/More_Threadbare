@@ -4,7 +4,8 @@
 class_name NPC
 extends CharacterBody2D
 
-const DEFAULT_SPRITE_FRAME: SpriteFrames = preload("uid://cpm5o35ede3qs")
+
+const DEFAULT_SPRITE_FRAME: SpriteFrames = preload("uid://cpm5o35ede3qs") 
 
 @export var npc_name: String
 
@@ -21,8 +22,7 @@ func _set_look_at_side(new_look_at_side: Enums.LookAtSide) -> void:
 	look_at_side = new_look_at_side
 	if not is_node_ready():
 		return
-	animated_sprite_2d.flip_h = look_at_side == Enums.LookAtSide.LEFT
-
+	animated_sprite_2d.flip_h = look_at_side == Enums.LookAtSide.LEFT 
 
 func _set_sprite_frames(new_sprite_frames: SpriteFrames) -> void:
 	sprite_frames = new_sprite_frames
